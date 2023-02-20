@@ -139,16 +139,16 @@ li {
     border: 1px solid black;
     border-radius: 15px;
     flex-basis: 300px;
-    height: 175px;
+    height: 150px;
     list-style: none;
     box-shadow: 10px 1px 15px darkslategrey;
     transition: all 1s;
 }
 
-li img {
+#testje img {
     padding: 5px 5px;
     width: 100px;
-    height: 70px;
+    height: 80px;
     border-radius: 15px 15px;
 }
 
@@ -161,12 +161,11 @@ h1 {
 }
 
 h2 {
+    margin: 0 5px 0 0;
     /*position: absolute;*/
-    top: 1px;
-    right: 10px;
     padding: 5px 5px;
     color: black;
-    font-size: 25px;
+    /*font-size: 25px;*/
 }
 
 p {
@@ -178,3 +177,24 @@ p {
     font-size: 18px;
 }
 
+/*////////////// Error Message  /////////////*/
+
+
+#error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    width: 400px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#testje {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}

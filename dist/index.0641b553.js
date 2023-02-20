@@ -591,9 +591,9 @@ function test(countries) {
             return colour;
         }
         const colourOutcome = region(countries.region);
-        return ` <li id="${colourOutcome}">
+        return ` <li id="${colourOutcome}"> <div id="testje">
                                 <img src="${countries.flag}" alt="flag of country">
-                               <h2> ${countries.name} </h2>
+                               <h2> ${countries.name} </h2> </div>
                                <p> Has a population of ${countries.population} people </p>
                                 </li>`;
     });

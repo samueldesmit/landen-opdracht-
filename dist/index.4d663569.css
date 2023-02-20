@@ -117,7 +117,7 @@ li:hover {
 }
 
 li {
-  height: 175px;
+  height: 150px;
   border: 1px solid #000;
   border-radius: 15px;
   flex-direction: column;
@@ -129,9 +129,9 @@ li {
   box-shadow: 10px 1px 15px #2f4f4f;
 }
 
-li img {
+#testje img {
   width: 100px;
-  height: 70px;
+  height: 80px;
   border-radius: 15px;
   padding: 5px;
 }
@@ -143,10 +143,8 @@ h1 {
 
 h2 {
   color: #000;
+  margin: 0 5px 0 0;
   padding: 5px;
-  font-size: 25px;
-  top: 1px;
-  right: 10px;
 }
 
 p {
@@ -155,6 +153,23 @@ p {
   font-size: 18px;
   bottom: 2px;
   left: 2px;
+}
+
+#error {
+  width: 400px;
+  text-align: center;
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40px;
+  display: flex;
+}
+
+#testje {
+  text-align: right;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
