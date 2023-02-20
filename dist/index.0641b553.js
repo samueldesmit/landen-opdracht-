@@ -563,22 +563,21 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 async function fetchAllCountries() {
     try {
         const result = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population");
-        // console.log(result)
-        const test = result.data.map((land)=>{
-            const outcome = [
-                {
-                    name: land.name
-                },
-                {
-                    people: land.population
-                },
-                {
-                    flag: land.flag
-                }
-            ];
-            return outcome;
-        });
-        console.log(test);
+        const countries = result.data;
+        // console.log(countries)
+        test(countries);
+    } catch (e) {
+        const country = document.getElementById("countriesUl");
+        country.innerHTML = ` <li id="error">No countries found :(</li>
+`;
+        console.error(e);
+    }
+}
+fetchAllCountries();
+function test(countries) {
+    const countryElement = document.getElementById("countriesUl");
+    countries.sort((a, b)=>a.population - b.population);
+    countryElement.innerHTML = countries.map((countries)=>{
         function region(regionName) {
             let colour = " ";
             if (regionName === "Asia") colour = "red";
@@ -586,25 +585,19 @@ async function fetchAllCountries() {
             if (regionName === "Oceania") colour = "purple";
             if (regionName === "Africa") colour = "blue";
             if (regionName === "Americas") colour = "green";
+            if (regionName === "Polar") colour = "white";
+            if (regionName === "Antarctic Ocean") colour = "white";
+            if (regionName === "Antarctic") colour = "white";
             return colour;
         }
-        const colourOutcome = region(result.data[0].region);
-        // console.log(colourOutcome);
-        const country = document.getElementById("countriesUl");
-        country.innerHTML = ` <li id="${colourOutcome}">
-                                ${result.data[0].name}
-                               <p> Has a population of ${result.data[0].population} people </p>
-                                <img src="${result.data[0].flag}" alt="flag of country">
-                                </li>                           
-`;
-    } catch (e) {
-        const country = document.getElementById("countriesUl");
-        country.innerHTML = ` <li>Geen land gevonden</li>
-`;
-        console.error(e);
-    }
+        const colourOutcome = region(countries.region);
+        return ` <li id="${colourOutcome}">
+                                <img src="${countries.flag}" alt="flag of country">
+                               <h2> ${countries.name} </h2>
+                               <p> Has a population of ${countries.population} people </p>
+                                </li>`;
+    });
 }
-fetchAllCountries();
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

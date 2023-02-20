@@ -1,29 +1,160 @@
-#red {
-  color: red;
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, sans-serif;
 }
 
-#een {
-  color: green;
+body {
+  background-image: url("world_map.34fa97b5.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.innercontainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  display: flex;
+}
+
+ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+}
+
+#red {
+  color: red;
+  background-color: #f003;
+  transition: all .5s;
+}
+
+#red:hover {
+  color: red;
+  background-color: #ff000080;
 }
 
 #blue {
   color: #00f;
+  background-color: #00f3;
+  transition: all .5s;
+}
+
+#blue:hover {
+  color: #00f;
+  background-color: #0000ffb3;
 }
 
 #purple {
   color: purple;
+  background-color: #f0f3;
+  transition: all .5s;
+}
+
+#purple:hover {
+  color: purple;
+  background-color: #ff00ffb3;
 }
 
 #yellow {
   color: #ff0;
+  background-color: #ff03;
+  transition: all .5s;
+}
+
+#yellow:hover {
+  color: #ff0;
+  background-color: #ffff00b3;
+}
+
+#green {
+  color: green;
+  background-color: #0f03;
+  transition: all .5s;
+}
+
+#green:hover {
+  color: green;
+  background-color: #00ff00b3;
+}
+
+#white {
+  background-image: none;
+  background-position: 63px -40px;
+  background-size: 1000px;
+  transition: all .5s;
+}
+
+#white:hover {
+  background-image: url("Cute-Penguin-Face-Illustration-Graphics-19152745-1.5e4434ce.jpg");
+  background-position: 63px -40px;
+  background-size: 400px;
+  transition: all .5s;
+}
+
+#red:hover p, #yellow:hover p, #white:hover p, #purple:hover p, #green:hover p, #blue:hover p, #red:hover h2, #yellow:hover h2, #white:hover h2, #purple:hover h2, #green:hover h2, #blue:hover h2 {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all .5s;
+}
+
+#red:hover img, #yellow:hover img, #white:hover img, #purple:hover img, #green:hover img, #blue:hover img {
+  transition: all .5s;
+  box-shadow: 10px 1px 15px #2f4f4f;
+}
+
+li:hover {
+  flex-direction: column;
+  flex-basis: 400px;
+  transition: all 1s;
+  display: flex;
+  box-shadow: 10px 10px 30px #000;
+}
+
+li {
+  height: 175px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  flex-direction: column;
+  flex-basis: 300px;
+  list-style: none;
+  transition: all 1s;
+  display: flex;
+  position: relative;
+  box-shadow: 10px 1px 15px #2f4f4f;
 }
 
 li img {
-  width: 450px;
+  width: 100px;
+  height: 70px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+h1 {
+  margin: 50px;
+  font-size: 45px;
+}
+
+h2 {
+  color: #000;
+  padding: 5px;
+  font-size: 25px;
+  top: 1px;
+  right: 10px;
 }
 
 p {
   color: #000;
+  padding: 5px;
+  font-size: 18px;
+  bottom: 2px;
+  left: 2px;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
