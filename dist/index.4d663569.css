@@ -29,57 +29,57 @@ ul {
 
 #red {
   color: red;
-  background-color: #f003;
+  background-color: #d14e5b33;
   transition: all .5s;
 }
 
 #red:hover {
   color: red;
-  background-color: #ff000080;
+  background-color: #d14e5b80;
 }
 
 #blue {
   color: #00f;
-  background-color: #00f3;
+  background-color: #5575c133;
   transition: all .5s;
 }
 
 #blue:hover {
   color: #00f;
-  background-color: #0000ffb3;
+  background-color: #5575c1b3;
 }
 
 #purple {
   color: purple;
-  background-color: #f0f3;
+  background-color: #a652ba33;
   transition: all .5s;
 }
 
 #purple:hover {
   color: purple;
-  background-color: #ff00ffb3;
+  background-color: #a652bab3;
 }
 
 #yellow {
   color: #ff0;
-  background-color: #ff03;
+  background-color: #ffd43533;
   transition: all .5s;
 }
 
 #yellow:hover {
   color: #ff0;
-  background-color: #ffff00b3;
+  background-color: #ffd435b3;
 }
 
 #green {
   color: green;
-  background-color: #0f03;
+  background-color: #4c824b33;
   transition: all .5s;
 }
 
 #green:hover {
   color: green;
-  background-color: #00ff00b3;
+  background-color: #4c824bb3;
 }
 
 #white {
@@ -90,7 +90,7 @@ ul {
 }
 
 #white:hover {
-  background-image: url("Cute-Penguin-Face-Illustration-Graphics-19152745-1.5e4434ce.jpg");
+  background-image: url("cute-penguin-png.001beb59.png");
   background-position: 63px -40px;
   background-size: 400px;
   transition: all .5s;

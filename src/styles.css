@@ -32,57 +32,57 @@ ul {
 /*////////////// Kleuren per land  /////////////*/
 #red {
     color: red;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(209,78,91, 0.2);
     transition: all .5s;
 }
 
 #red:hover {
     color: red;
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(209,78,91, 0.5);
 }
 
 #blue {
     color: blue;
-    background-color: rgba(0, 0, 255, 0.2);
+    background-color: rgba(85,117,193, 0.2);
     transition: all .5s;
 }
 
 #blue:hover {
     color: blue;
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: rgba(85,117,193, 0.7);
 }
 
 #purple {
     color: purple;
-    background-color: rgba(255, 0, 255, 0.2);
+    background-color: rgba(166,82,186, 0.2);
     transition: all .5s;
 }
 
 #purple:hover {
     color: purple;
-    background-color: rgba(255, 0, 255, 0.7);
+    background-color: rgba(166,82,186, 0.7);
 }
 
 #yellow {
     color: yellow;
-    background-color: rgba(255, 255, 0, 0.2);
+    background-color: rgba(255,212,53, 0.2);
     transition: all .5s;
 }
 
 #yellow:hover {
     color: yellow;
-    background-color: rgba(255, 255, 0, 0.7);
+    background-color: rgba(255,212,53, 0.7);
 }
 
 #green {
     color: green;
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: rgba(76,130,75, 0.2);
     transition: all .5s;
 }
 
 #green:hover {
     color: green;
-    background-color: rgba(0, 255, 0, 0.7);
+    background-color: rgba(76,130,75, 0.7);
 }
 
 #white {
@@ -93,7 +93,7 @@ ul {
 }
 
 #white:hover {
-    background-image: url("assets/Cute-Penguin-Face-Illustration-Graphics-19152745-1.jpg");
+    background-image: url("assets/cute-penguin-png.png");
     /*background-size: cover;*/
     background-size: 400px;
     background-position: 63px -40px;
