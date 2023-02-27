@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"lKzq4":[function(require,module,exports) {
+})({"gJWcK":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "fe4256060641b553";
+module.bundle.HMR_BUNDLE_ID = "072be47ed67ac236";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,49 +556,63 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"bNKaB":[function(require,module,exports) {
+},{}],"alK4Z":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+// //////////////////////////////////////////////////////////////////////////////////////
+// in app.2 heb ik het via een omweg werkend gekregen maar app3 is de juiste versie.
+// //////////////////////////////////////////////////////////////////////////////////////
 async function fetchAllCountries() {
     try {
-        const result = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population");
+        const result = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all");
         const countries = result.data;
-        // console.log(countries)
-        test(countries);
+        console.log(result.data);
+        getName(countries);
     } catch (e) {
-        const country = document.getElementById("countriesUl");
+        const country = document.getElementById("countryDiv");
         country.innerHTML = ` <li id="error">No countries found :(</li>
 `;
         console.error(e);
     }
 }
 fetchAllCountries();
-function test(countries) {
-    const countryElement = document.getElementById("countriesUl");
-    countries.sort((a, b)=>a.population - b.population);
-    countryElement.innerHTML = countries.map((countries)=>{
-        function region(regionName) {
-            let colour = " ";
-            if (regionName === "Asia") colour = "red";
-            if (regionName === "Europe") colour = "yellow";
-            if (regionName === "Oceania") colour = "purple";
-            if (regionName === "Africa") colour = "blue";
-            if (regionName === "Americas") colour = "green";
-            if (regionName === "Polar") colour = "white";
-            if (regionName === "Antarctic Ocean") colour = "white";
-            if (regionName === "Antarctic") colour = "white";
-            return colour;
-        }
-        const colourOutcome = region(countries.region);
-        return ` <li id="${colourOutcome}"> <div id="testje">
-                                <img src="${countries.flag}" alt="flag of country">
-                               <h2> ${countries.name} </h2> </div>
-                               <p> Has a population of ${countries.population} people </p>
-                                </li>`;
+const inputField = document.getElementById("land-search");
+inputField.addEventListener("keyup", typen);
+let whichCountry = "Germany";
+function typen(e) {
+    whichCountry = e.target.value;
+    console.log(e.target.value);
+}
+const clickButton = document.getElementById("knopje");
+clickButton.addEventListener("click", handleSubmit);
+const submitButton = document.getElementById("formie");
+function handleSubmit(e) {
+    e.preventDefault();
+    // getName()
+    fetchAllCountries();
+    document.getElementById("land-search").value = "";
+}
+submitButton.addEventListener("submit", handleSubmit);
+function getName(countries) {
+    const search = countries.find((land)=>{
+        return land.name === whichCountry;
+    // || land.altSpellings[0] === whichCountry || land.altSpellings[1] === whichCountry || land.altSpellings[2] === whichCountry || land.altSpellings[3] === whichCountry
     });
+    const country = document.getElementById("countryDiv");
+    if (search.currencies.length < 2) country.innerHTML = ` <img src="${search.flag}" alt="picture of flaq"/>
+ <p id="countryName">${search.name}</p>
+<p>${search.name} is situated in ${search.subregion}. </p>
+<p>It has a population of ${search.population} people. </p>
+<p>The capital is ${search.capital} and you can pay with ${search.currencies[0].name}'s</p>
+`;
+    else country.innerHTML = ` <img src="${search.flag}" alt="picture of flaq"/>
+ <p id="countryName">${search.name}</p>
+<p>${search.name} is situated in ${search.subregion}. It has a population of ${search.population} people. </p>
+<p>The capital is ${search.capital} and you can pay with ${search.currencies[0].name}'s and ${search.currencies[1].name}'s </p>
+`;
 }
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequirecb08")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gJWcK","alK4Z"], "alK4Z", "parcelRequirecb08")
 
-//# sourceMappingURL=index.0641b553.js.map
+//# sourceMappingURL=opdracht2.d67ac236.js.map

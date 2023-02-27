@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"lKzq4":[function(require,module,exports) {
+})({"io3JB":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "fe4256060641b553";
+module.bundle.HMR_BUNDLE_ID = "9db7c82677ca96c9";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -556,49 +556,57 @@ function hmrAccept(bundle, id) {
     });
 }
 
-},{}],"bNKaB":[function(require,module,exports) {
+},{}],"264pe":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-async function fetchAllCountries() {
+// //////////////////////////////////////////////////////////////////////////////////////
+// in app.2 heb ik het via een omweg werkend gekregen maar dit (app3) is de juiste versie.
+// //////////////////////////////////////////////////////////////////////////////////////
+let whichCountry = "Netherlands";
+async function fetchAllCountries(test) {
+    const search = `https://restcountries.com/v2/name/${whichCountry}`;
     try {
-        const result = await (0, _axiosDefault.default).get("https://restcountries.com/v2/all?fields=name,region,flag,population");
-        const countries = result.data;
-        // console.log(countries)
-        test(countries);
+        const result = await (0, _axiosDefault.default).get(search);
+        const dataCountry = result.data;
+        console.log(result);
+        gotName(dataCountry[0]);
     } catch (e) {
-        const country = document.getElementById("countriesUl");
-        country.innerHTML = ` <li id="error">No countries found :(</li>
-`;
+        const country = document.getElementById("countryDiv");
+        country.innerHTML = ` <li id="error">No countries found :(</li>`;
         console.error(e);
     }
 }
 fetchAllCountries();
-function test(countries) {
-    const countryElement = document.getElementById("countriesUl");
-    countries.sort((a, b)=>a.population - b.population);
-    countryElement.innerHTML = countries.map((countries)=>{
-        function region(regionName) {
-            let colour = " ";
-            if (regionName === "Asia") colour = "red";
-            if (regionName === "Europe") colour = "yellow";
-            if (regionName === "Oceania") colour = "purple";
-            if (regionName === "Africa") colour = "blue";
-            if (regionName === "Americas") colour = "green";
-            if (regionName === "Polar") colour = "white";
-            if (regionName === "Antarctic Ocean") colour = "white";
-            if (regionName === "Antarctic") colour = "white";
-            return colour;
-        }
-        const colourOutcome = region(countries.region);
-        return ` <li id="${colourOutcome}"> <div id="testje">
-                                <img src="${countries.flag}" alt="flag of country">
-                               <h2> ${countries.name} </h2> </div>
-                               <p> Has a population of ${countries.population} people </p>
-                                </li>`;
-    });
+const inputField = document.getElementById("land-search");
+inputField.addEventListener("keyup", typen);
+function typen(e) {
+    whichCountry = e.target.value;
+}
+const clickButton = document.getElementById("knopje");
+clickButton.addEventListener("click", handleSubmit);
+const submitButton = document.getElementById("formie");
+function handleSubmit(e) {
+    e.preventDefault();
+    fetchAllCountries();
+    document.getElementById("land-search").value = "";
+}
+function gotName(dataCountry) {
+    const country = document.getElementById("countryDiv");
+    if (dataCountry.currencies.length < 2) country.innerHTML = ` <img src="${dataCountry.flag}" alt="picture of flaq"/>
+ <p id="countryName">${dataCountry.name}</p>
+<p>${dataCountry.name} is situated in ${dataCountry.subregion}. </p>
+<p>It has a population of ${dataCountry.population} people. </p>
+<p>The capital is ${dataCountry.capital} and you can pay with ${dataCountry.currencies[0].name}'s</p>
+`;
+    else country.innerHTML = ` <img src="${dataCountry.flag}" alt="picture of flaq"/>
+ <p id="countryName">${dataCountry.name}</p>
+<p>${dataCountry.name} is situated in ${dataCountry.subregion}. </p>
+<p>It has a population of ${dataCountry.population} people. </p>
+<p>The capital is ${dataCountry.capital} and you can pay with ${dataCountry.currencies[0].name}'s and ${dataCountry.currencies[1].name}'s</p>
+`;
 }
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequirecb08")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["io3JB","264pe"], "264pe", "parcelRequirecb08")
 
-//# sourceMappingURL=index.0641b553.js.map
+//# sourceMappingURL=opdracht3.77ca96c9.js.map
