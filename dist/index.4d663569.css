@@ -16,14 +16,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 100px;
+  margin: 0 50px;
   display: flex;
 }
 
 ul {
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   display: flex;
 }
 
@@ -108,20 +108,12 @@ ul {
   box-shadow: 10px 1px 15px #2f4f4f;
 }
 
-li:hover {
-  flex-direction: column;
-  flex-basis: 400px;
-  transition: all 1s;
-  display: flex;
-  box-shadow: 10px 10px 30px #000;
-}
-
 li {
-  height: 150px;
+  height: 120px;
   border: 1px solid #000;
   border-radius: 15px;
   flex-direction: column;
-  flex-basis: 300px;
+  flex-basis: 500px;
   list-style: none;
   transition: all 1s;
   display: flex;

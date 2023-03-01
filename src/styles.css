@@ -18,14 +18,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 100px;
+    margin: 0 50px;
 }
 
 ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    /*margin: 400px 0;*/
+
+
     /*background-color: yellow;*/
 }
 
@@ -123,14 +126,6 @@ ul {
 /*////////////// List items opmaak  /////////////*/
 
 
-li:hover {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 400px;
-    transition: all 1s;
-    box-shadow: 10px 10px 30px black;
-
-}
 
 li {
     display: flex;
@@ -138,8 +133,8 @@ li {
     position: relative;
     border: 1px solid black;
     border-radius: 15px;
-    flex-basis: 300px;
-    height: 150px;
+    flex-basis: 500px;
+    height: 120px;
     list-style: none;
     box-shadow: 10px 1px 15px darkslategrey;
     transition: all 1s;

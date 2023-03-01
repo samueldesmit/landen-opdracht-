@@ -561,7 +561,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 // //////////////////////////////////////////////////////////////////////////////////////
-// in app.2 heb ik het via een omweg werkend gekregen maar app3 is de juiste versie.
+// in app.2 heb ik het via een omweg werkend gekregen app3 is de juiste versie.
 // //////////////////////////////////////////////////////////////////////////////////////
 async function fetchAllCountries() {
     try {
