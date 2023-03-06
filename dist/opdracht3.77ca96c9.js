@@ -564,7 +564,7 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 // in app.2 heb ik het via een omweg werkend gekregen maar dit (app3) is de juiste versie.
 // //////////////////////////////////////////////////////////////////////////////////////
 let whichCountry = "Netherlands";
-async function fetchAllCountries(test) {
+async function fetchAllCountries() {
     const search = `https://restcountries.com/v2/name/${whichCountry}`;
     try {
         const result = await (0, _axiosDefault.default).get(search);
@@ -578,33 +578,30 @@ async function fetchAllCountries(test) {
     }
 }
 fetchAllCountries();
-const inputField = document.getElementById("land-search");
+const inputField = document.getElementById("landSearch");
 inputField.addEventListener("keyup", typen);
 function typen(e) {
     whichCountry = e.target.value;
 }
-const clickButton = document.getElementById("knopje");
+const clickButton = document.getElementById("fromButton");
 clickButton.addEventListener("click", handleSubmit);
-const submitButton = document.getElementById("formie");
+const submitButton = document.getElementById("formField");
 function handleSubmit(e) {
     e.preventDefault();
     fetchAllCountries();
-    document.getElementById("land-search").value = "";
+    document.getElementById("landSearch").value = "";
 }
 function gotName(dataCountry) {
     const country = document.getElementById("countryDiv");
-    if (dataCountry.currencies.length < 2) country.innerHTML = ` <img src="${dataCountry.flag}" alt="picture of flaq"/>
- <p id="countryName">${dataCountry.name}</p>
-<p>${dataCountry.name} is situated in ${dataCountry.subregion}. </p>
-<p>It has a population of ${dataCountry.population} people. </p>
-<p>The capital is ${dataCountry.capital} and you can pay with ${dataCountry.currencies[0].name}'s</p>
-`;
-    else country.innerHTML = ` <img src="${dataCountry.flag}" alt="picture of flaq"/>
- <p id="countryName">${dataCountry.name}</p>
-<p>${dataCountry.name} is situated in ${dataCountry.subregion}. </p>
-<p>It has a population of ${dataCountry.population} people. </p>
-<p>The capital is ${dataCountry.capital} and you can pay with ${dataCountry.currencies[0].name}'s and ${dataCountry.currencies[1].name}'s</p>
-`;
+    const currency = document.getElementById("countryP");
+    country.innerHTML = ` <img src="${dataCountry.flag}" alt="picture of flaq"/>
+            <p id="countryName">${dataCountry.name}</p>
+            <p>${dataCountry.name} is situated in ${dataCountry.subregion}. 
+            It has a population of ${dataCountry.population} people.</p>    `;
+    if (dataCountry.currencies.length < 2) currency.innerHTML = `The capital is ${dataCountry.capital} 
+        and you can pay with ${dataCountry.currencies[0].name}'s`;
+    else currency.innerHTML = `The capital is ${dataCountry.capital} 
+        and you can pay with ${dataCountry.currencies[0].name}'s and ${dataCountry.currencies[1].name}'s`;
 }
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["io3JB","264pe"], "264pe", "parcelRequirecb08")

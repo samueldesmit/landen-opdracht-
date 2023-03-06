@@ -1,0 +1,109 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+body {
+  background-color: #8a9b68;
+}
+
+#innercontainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  display: flex;
+}
+
+h1 {
+  color: #931f1d;
+  margin: 20px;
+}
+
+#formField {
+  width: 400px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  margin: 0 0 40px;
+  transition: all .5s;
+  position: relative;
+  box-shadow: 0 1px 4px #00000080;
+}
+
+#formie:hover {
+  box-shadow: 0 5px 4px #00000080;
+}
+
+form button {
+  width: 140px;
+  height: 50px;
+  color: #d5ddbc;
+  background-color: #000;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  font-family: Source Sans Pro, sans-serif;
+  transition: all .5s;
+  position: absolute;
+  right: 0;
+}
+
+form button:focus {
+  outline: none;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+form input {
+  text-align: center;
+  width: 260px;
+  height: 50px;
+  background-color: #d5ddbc;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  font-family: Source Sans Pro, sans-serif;
+  transition: all .5s;
+  position: absolute;
+  left: 0;
+}
+
+form input:focus {
+  color: #931f1d;
+  background-color: #d5ddbc;
+  outline: none;
+}
+
+#countryDivDiv {
+  max-width: 400px;
+  text-align: center;
+  background-color: #d5ddbc;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: all .5s;
+  display: flex;
+  box-shadow: 10px 15px 30px #00000080;
+}
+
+#countryDivDiv:hover {
+  cursor: pointer;
+  box-shadow: 10px 15px 60px #00000080;
+}
+
+#countryDiv img {
+  width: 300px;
+  margin: 0 0 20px;
+  box-shadow: 5px 1px 10px #2f4f4f;
+}
+
+#countryName {
+  margin: 10px 0;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=opdracht3.891abdc4.css.map */
