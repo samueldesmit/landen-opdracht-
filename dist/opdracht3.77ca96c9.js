@@ -573,7 +573,9 @@ async function fetchAllCountries() {
         gotName(dataCountry[0]);
     } catch (e) {
         const country = document.getElementById("countryDiv");
-        country.innerHTML = ` <li id="error">No countries found :(</li>`;
+        const currency = document.getElementById("countryP");
+        country.innerHTML = ` <p id="error">No countries found</p>`;
+        currency.innerHTML = ` :( `;
         console.error(e);
     }
 }
