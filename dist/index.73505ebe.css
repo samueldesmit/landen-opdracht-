@@ -1,0 +1,42 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+h1 {
+  color: red;
+}
+
+body {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+form {
+  flex-direction: column;
+  display: flex;
+}
+
+#innercontainer {
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 100px;
+  display: flex;
+}
+
+#countryDiv {
+  max-width: 400px;
+  border: 2px solid red;
+  flex-direction: column;
+  display: flex;
+}
+
+#countryDiv img {
+  width: 300px;
+}
+
+/*# sourceMappingURL=opdracht2.73505ebe.css.map */

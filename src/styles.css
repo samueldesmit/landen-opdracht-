@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-image: url("assets/world_map.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.innercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /*margin: 400px 0;*/
+
+
+    /*background-color: yellow;*/
+}
+
+/*////////////// Kleuren per land  /////////////*/
+#red {
+    color: red;
+    background-color: rgba(209,78,91, 0.2);
+    transition: all .5s;
+}
+
+#red:hover {
+    color: red;
+    background-color: rgba(209,78,91, 0.5);
+}
+
+#blue {
+    color: blue;
+    background-color: rgba(85,117,193, 0.2);
+    transition: all .5s;
+}
+
+#blue:hover {
+    color: blue;
+    background-color: rgba(85,117,193, 0.7);
+}
+
+#purple {
+    color: purple;
+    background-color: rgba(166,82,186, 0.2);
+    transition: all .5s;
+}
+
+#purple:hover {
+    color: purple;
+    background-color: rgba(166,82,186, 0.7);
+}
+
+#yellow {
+    color: yellow;
+    background-color: rgba(255,212,53, 0.2);
+    transition: all .5s;
+}
+
+#yellow:hover {
+    color: yellow;
+    background-color: rgba(255,212,53, 0.7);
+}
+
+#green {
+    color: green;
+    background-color: rgba(76,130,75, 0.2);
+    transition: all .5s;
+}
+
+#green:hover {
+    color: green;
+    background-color: rgba(76,130,75, 0.7);
+}
+
+#white {
+    background-image: none;
+    background-position: 63px -40px;
+    background-size: 1000px;
+    transition: all .5s;
+}
+
+#white:hover {
+    background-image: url("assets/cute-penguin-png.png");
+    /*background-size: cover;*/
+    background-size: 400px;
+    background-position: 63px -40px;
+    transition: all .5s;
+}
+
+#red:hover p, #yellow:hover p, #white:hover p, #purple:hover p, #green:hover p, #blue:hover p {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all .5s;
+}
+
+#red:hover h2, #yellow:hover h2, #white:hover h2, #purple:hover h2, #green:hover h2, #blue:hover h2 {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all .5s;
+}
+
+#red:hover img, #yellow:hover img, #white:hover img, #purple:hover img, #green:hover img, #blue:hover img {
+    box-shadow: 10px 1px 15px darkslategrey;
+    transition: all .5s;
+
+
+}
+/*////////////// List items opmaak  /////////////*/
+
+
+
+li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    flex-basis: 500px;
+    height: 120px;
+    list-style: none;
+    box-shadow: 10px 1px 15px darkslategrey;
+    transition: all 1s;
+}
+
+#testje img {
+    padding: 5px 5px;
+    width: 100px;
+    height: 80px;
+    border-radius: 15px 15px;
+}
+
+/*////////////// Tekst opmaak  /////////////*/
+
+
+h1 {
+    margin: 50px 50px;
+    font-size: 45px;
+}
+
+h2 {
+    margin: 0 5px 0 0;
+    /*position: absolute;*/
+    padding: 5px 5px;
+    color: black;
+    /*font-size: 25px;*/
+}
+
+p {
+    padding: 5px 5px;
+    /*position: absolute;*/
+    bottom: 2px;
+    left: 2px;
+    color: black;
+    font-size: 18px;
+}
+
+/*////////////// Error Message  /////////////*/
+
+
+#error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    width: 400px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#testje {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
